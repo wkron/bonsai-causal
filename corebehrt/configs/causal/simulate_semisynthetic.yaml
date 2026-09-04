@@ -56,8 +56,16 @@ outcomes:
           coefficient: 0.1
       noise_scale: 0.1
     treatment_effect:
-      mode: constant
-      delta: 1.0
+      mode: heterogeneous
+      delta_0: 1.0
+      heterogeneous_coefficients:
+        utilization_intensity: -0.25
+        code_diversity: -0.25
+        disease_burden: -0.25
+        chronic_disease_count: -0.25
+    # treatment_effect:
+    #   mode: constant
+    #   delta: 1.0
 
   OUTCOME_NULL:
     outcome_model:
